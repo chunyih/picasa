@@ -11,8 +11,8 @@ handlers:
 - url: /js
   static_dir: js
 
-- url: /proxy
-  script: proxy.php
+- url: /album
+  script: album.html
 
 - url: /.*
   script: index.html

@@ -7,23 +7,26 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
-  <div class="contain-to-grid fixed">
+  <div class="contain-to-grid">
     <nav class="top-bar" data-topbar>
      
     </nav>
   </div>
 
-
   <div class="row main" id="main"></div>
 
+<?php
 
+  // The value of the variable name is found
+  echo "<h1>Hello " . $_GET["id"] . "</h1>";
+
+  ?>
 
 
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/foundation.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
+  
 </body>
 </html>
