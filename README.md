@@ -14,6 +14,6 @@ Simple Picasa is a web app that displays Picasa Web Album's public phtot. Good f
 <br>
 
 #### Demo
-[Here](linear-rig-499.appspot.com)
+[Here](https://linear-rig-499.appspot.com)
 <br>
 <br>
