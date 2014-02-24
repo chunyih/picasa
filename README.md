@@ -9,7 +9,7 @@ Simple Picasa is a web app that displays Picasa Web Album's public phtot. Good f
 - Using: Javascript, jQuery, FancyBox, Google App Engine (PHP)
 - Configuration: ```/js/script.js```  
 -- userID: the trailing number of Picasa Web Album URL after login  
--- fullFramPhotoWidth: image size for single photo view (unit: pixel)
+-- fullFramPhotoWidth: image width for single photo view (unit: pixel)
 <br>
 <br>
 
