@@ -2,18 +2,20 @@ jQuery(document).ready(function($){
 
     // Settings
     var userID             = "100330718735291173642",
-        getAblumList       = "https://picasaweb.google.com/data/feed/base/user/:userid?alt=json&fields=entry(id,title,link,media:group(media:thumbnail))",
-        getPhtotList       = "https://picasaweb.google.com/data/feed/api/user/:userid/albumid/:albumid?alt=json&fields=title,link,entry(summary,media:group(media:thumbnail))",
-        albumPerRow        = 2,
         fullFramPhotoWidth = "1200"; // px
-
+    
+    // App default
+    var getAblumList       = "https://picasaweb.google.com/data/feed/base/user/:userid?alt=json&fields=entry(id,title,link,media:group(media:thumbnail))",
+        getPhtotList       = "https://picasaweb.google.com/data/feed/api/user/:userid/albumid/:albumid?alt=json&fields=title,link,entry(summary,media:group(media:thumbnail))",
+        albumPerRow        = 2;
+        
     // Rewrite API links
     getAblumList = getAblumList.replace(/:userid/, userID);
     getPhtotList = getPhtotList.replace(/:userid/, userID);
 
     // List all albums, only runs on home page
     if( $("body").has("span#home").length != 0 ){
-      $(".mainTitle > p").text("Chunyih's Album");
+      $(".mainTitle > p").text("Chunyih's Albums");
       $(".leftBtn > a").hide();
 
       var albumID     = "",

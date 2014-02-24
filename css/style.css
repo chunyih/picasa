@@ -28,6 +28,10 @@ body {
   float: left;
 }
 
+.top-bar .leftBtn a {
+  display: none;
+}
+
 .top-bar .leftBtn i {
   font-size: 25px;
   margin-top: 9px;
