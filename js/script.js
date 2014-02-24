@@ -6,7 +6,6 @@ jQuery(document).ready(function($){
         getPhtotList       = "https://picasaweb.google.com/data/feed/api/user/:userid/albumid/:albumid?alt=json&fields=title,link,entry(summary,media:group(media:thumbnail))",
         albumPerRow        = 2,
         fullFramPhotoWidth = "1200"; // px
-    $.ajaxSetup({ cache: false }); // cache option
 
     // Rewrite API links
     getAblumList = getAblumList.replace(/:userid/, userID);
@@ -14,6 +13,9 @@ jQuery(document).ready(function($){
 
     // List all albums, only runs on home page
     if( $("body").has("span#home").length != 0 ){
+      $(".mainTitle > p").text("Chunyih's Album");
+      $(".leftBtn > a").hide();
+
       var albumID     = "",
           title       = "",
           altLink     = "",
@@ -37,14 +39,14 @@ jQuery(document).ready(function($){
           thumbURL   = val.media$group.media$thumbnail[0].url;
 
           if( i % albumPerRow == 0 ){
-            $("#main").append("<div class='row albumRow'><div>");
+            $("#main").append("<div class='row albumRow'></div>");
           };
 
-          divBlock = '<div id="'+altName+'" class="large-6 columns albumDiv"> \
-                        <a href="/album?albid='+albumID+'&"> \
-                          <img src="'+thumbURL+'" /> \
-                        </a> \
-                      </div>';
+          divBlock = '<a href="/album?albid='+albumID+'&"> \
+                        <div id="'+altName+'" class="large-6 columns albumDiv"> \
+                          <img src="'+thumbURL+'"><p class="albumTitle">'+title+'</p>\
+                        </div> \
+                      </a>';
           $(".albumRow").last().append(divBlock);
 
           i += 1;
@@ -71,6 +73,8 @@ jQuery(document).ready(function($){
         photoArray = data.feed.entry;
         console.log(photoArray);
         title   = data.feed.title.$t;
+        $(".mainTitle > p").text(title); // display album title
+        $(".leftBtn > a").show();
 
         var i = 0;
         $.each( photoArray, function(key,val){
