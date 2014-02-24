@@ -1,1 +1,43 @@
+/*============
+  Global
+=============*/
+
+.top-bar {
+  height: 45px;
+  background: rgba(255, 255, 255, .9);
+  width: 100%;
+  position: fixed;
+}
+
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 45px 8px 0 8px; 
+  background:  gray;
+}
+
+/*============
+  Album Page
+=============*/
+
+.photoThumb {
+  width: 25%;
+  display: inline-block;
+}
+
+img {
+  display: block;
+  width: 98%;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
 .albumDiv {background: gray;}

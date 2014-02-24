@@ -11,6 +11,9 @@ handlers:
 - url: /js
   static_dir: js
 
+- url: /fancybox
+  static_dir: fancybox
+
 - url: /album
   script: album.html
 
