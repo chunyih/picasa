@@ -1,8 +1,17 @@
 jQuery(document).ready(function($){
 
     // Settings
-    var userID             = "100330718735291173642",
-        fullFramPhotoWidth = "1200"; // px
+    if( document.URL.match(/userid=(.\d*)/i) == null ){
+      var userID = "100330718735291173642";
+    } else {
+      var userID = document.URL.match(/userid=(.\d*)/i)[1];
+    };
+
+    if( document.URL.match(/fw=(.\d*)/i) == null ){
+      var fullFramPhotoWidth = "1200";
+    } else {
+      var fullFramPhotoWidth = document.URL.match(/fw=(.\d*)/i)[1];
+    };
     
     // App default
     var getAblumList       = "https://picasaweb.google.com/data/feed/base/user/:userid?alt=json&fields=entry(id,title,link,media:group(media:thumbnail))",
@@ -15,7 +24,7 @@ jQuery(document).ready(function($){
 
     // List all albums, only runs on home page
     if( $("body").has("span#home").length != 0 ){
-      $(".mainTitle > p").text("Chunyih's Albums");
+      $(".mainTitle > p").text("Albums");
       $(".leftBtn > a").hide();
 
       var albumID     = "",
@@ -44,7 +53,7 @@ jQuery(document).ready(function($){
             $("#main").append("<div class='row albumRow'></div>");
           };
 
-          divBlock = '<a href="/album?albid='+albumID+'&"> \
+          divBlock = '<a href="/album?userid='+userID+'&fw='+fullFramPhotoWidth+'&albid='+albumID+'&"> \
                         <div id="'+altName+'" class="large-6 columns albumDiv"> \
                           <img src="'+thumbURL+'"><p class="albumTitle">'+title+'</p>\
                         </div> \
@@ -67,7 +76,7 @@ jQuery(document).ready(function($){
           photoArray   = [],
           divBlock     = "";
 
-      albumID = document.URL.match(/albid=(.*)&/i)[1];
+      albumID = document.URL.match(/albid=(.\d*)&/i)[1];
       getPhtotList = getPhtotList.replace(/:albumid/, albumID);
       console.log(getPhtotList);
 
@@ -76,6 +85,7 @@ jQuery(document).ready(function($){
         console.log(photoArray);
         title   = data.feed.title.$t;
         $(".mainTitle > p").text(title); // display album title
+        $(".leftBtn > a").attr("href",'../?userid='+userID+'&fw='+fullFramPhotoWidth+'');
         $(".leftBtn > a").show();
 
         var i = 0;

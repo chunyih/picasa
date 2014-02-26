@@ -17,6 +17,9 @@ handlers:
 - url: /album
   script: album.html
 
+- url: /fbpage
+  script: fbpage.html
+
 - url: /.*
   script: index.html
 
