@@ -13,7 +13,7 @@ Simple Picasa is a web app that displays Picasa Web Album's public phtot. Good f
   1. Go to the Profile Album of your Picasa Web. The web address should looks like this: ```picasaweb.google.com/{userid}/ProfilePhotos```  
   2. Copy the user id part
   3. Construct URL like this: ```linear-rig-499.appspot.com/?userid={userid}```  
-  Simply replace the {userid} part with your user id  
+  Simply replace {userid} with your user id  
   4. (Optional) By default, the full frame picture is 1200px wide. You can change it by constructing URL like this: ```linear-rig-499.appspot.com/?userid={userid}&fw={picture_width}```  
 That's it!
 <br>
