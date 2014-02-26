@@ -128,6 +128,9 @@ p.albumTitle {
   margin-bottom: 4px;
 }
 
+i.fa div {
+  font-family: 'Open Sans', sans-serif;
+}
 
 @media only screen and (min-width: 1136px) {
   .albumDiv {
