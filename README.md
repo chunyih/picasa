@@ -1,7 +1,7 @@
 Simple Picasa
 =========
 
-Simple Picasa is a web app that displays Picasa Web Album's public phtot. Good for people who just want to see photos without distractions. Also good for those who are not comfortable with computers.
+Simple Picasa is a web app that displays Picasa Web Album's public photos. Good for people who just want to see photos without distractions. Also good for those who are not comfortable with computers.
 <br>
 
 #### Demo: [linear-rig-499.appspot.com](https://linear-rig-499.appspot.com)
