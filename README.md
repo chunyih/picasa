@@ -8,7 +8,7 @@ Simple Picasa is a web app that displays Picasa Web Album's public photos. Good 
 
 
 #### Info:  
-- Using: Javascript, jQuery, FancyBox, Google App Engine (PHP)
+- Using: Javascript, jQuery, FancyBox, Google App Engine
 - Configuration: By default, it shows my albums. To view your own albums, simply:  
   1. Go to the Profile Album of your Picasa Web. The web address should looks like this: ```picasaweb.google.com/{userid}/ProfilePhotos```  
   2. Copy the user id part
