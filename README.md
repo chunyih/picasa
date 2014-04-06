@@ -14,7 +14,7 @@ Simple Picasa is a web app that displays Picasa Web Album's public photos. Good 
   2. Copy the user id part
   3. Construct URL like this: ```simple-picasa.appspot.com/?userid={userid}```  
   Simply replace {userid} with your user id  
-  4. (Optional) By default, the full frame picture is 1200px wide. You can change it by constructing URL like this: ```linear-rig-499.appspot.com/?userid={userid}&fw={picture_width}```  
+  4. (Optional) By default, the full frame picture is 1200px wide. You can change it by constructing URL like this: ```simple-picasa.appspot.com/?userid={userid}&fw={picture_width}```  
 That's it!
 <br>
 
